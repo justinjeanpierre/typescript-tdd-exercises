@@ -11,7 +11,7 @@ module Exercise1 {
         }
 
         public removeNumbers():string {
-            return 'incomplete method should remove 0-9';
+            return this.word.replace(/[0-9]/ig, '');
         }
     }
 }
