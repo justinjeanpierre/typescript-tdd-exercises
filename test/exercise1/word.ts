@@ -5,7 +5,7 @@ module Exercise1 {
         describe('Word', () => {
             describe('removeVowels()', () => {
                 // add your tests here (exercise B)
-                it('should stripe vowels from the word', () => {
+                it('should strip vowels from the word', () => {
 
                 });
             });
