@@ -12,7 +12,19 @@ module Calculator {
             describe('AddExpression', () => {
                 it('should return the sum of two Expressions provided in the constructor', () => {
                     var expression = new AddExpression(new NumberExpression(2), new NumberExpression(-5));
-                    assert.ok(expression.eval() === -3)
+                    assert.ok(expression.eval() === -3);
+                });
+            });
+            describe('NegateExpression', () => {
+                it('should return the negative of the Expression provided in the constructor', () => {
+                    var negateExpression = new NegateExpression(new NumberExpression(2));
+                    assert.equal(negateExpression.eval(), -2);
+                });
+            });
+            describe('PowerExpression', () => {
+                it('should return 2^(expression)', () => {
+                    var powerExpression = new PowerExpression(new NumberExpression(3));
+                    assert.equal(powerExpression.eval(), 8);
                 });
             });
             describe('ExpressionComparer', () => {

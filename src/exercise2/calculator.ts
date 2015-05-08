@@ -11,7 +11,7 @@ module Calculator {
         }
 
         eval() {
-            return this.val
+            return this.val;
         }
     }
 
@@ -21,7 +21,27 @@ module Calculator {
         }
 
         eval() {
-            return this.left.eval() + this.right.eval()
+            return this.left.eval() + this.right.eval();
+        }
+    }
+    
+    export class NegateExpression implements Expression {
+        constructor(private val:Expression) {
+            
+        }
+        
+        eval() {
+            return -this.val.eval();
+        }
+    }
+    
+    export class PowerExpression implements Expression {
+        constructor(private val:Expression) {
+            
+        }
+        
+        eval() {
+            return Math.pow(2, this.val.eval());
         }
     }
 
@@ -31,11 +51,11 @@ module Calculator {
         }
 
         equals():Boolean {
-            return this.left.eval() == this.right.eval()
+            return this.left.eval() == this.right.eval();
         }
 
         greaterThan():Boolean {
-            return this.left.eval() > this.right.eval()
+            return this.left.eval() > this.right.eval();
         }
     }
 }
