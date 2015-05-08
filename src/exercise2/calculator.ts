@@ -25,8 +25,6 @@ module Calculator {
         }
     }
 
-    // REMOVE THESE LINES WHEN START THE EXERCISE
-    /* istanbul ignore next */
     export class ExpressionComparer {
         constructor(private left:Expression, private right:Expression) {
 
