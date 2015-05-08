@@ -35,7 +35,7 @@ module Calculator {
         }
 
         greaterThan():Boolean {
-            return this.left.eval() < this.right.eval()
+            return this.left.eval() > this.right.eval()
         }
     }
 }
